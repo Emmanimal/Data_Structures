@@ -18,6 +18,29 @@ public class Main {
 		
 	}
 	
+	public static boolean recursePalindrome(String str) {
+		
+		int len = str.length();
+		
+		if (len <= 1) {
+			return true;
+		}
+		
+		else if (str.charAt(0) == str.charAt(len-1)) {
+			recursePalindrome(str.substring(1, len-1));
+			
+		}
+		
+		else if (str.charAt(0) != str.charAt(len-1)) {
+			return false;
+			
+		}
+		
+		return true;
+		
+		
+	}
+	
 	
 	
 
@@ -30,7 +53,8 @@ public class Main {
 		half = str.length()/2;
 		
 		
-		System.out.println(checkPalindrome(str,half));
+	//	System.out.println(checkPalindrome(str,half));
+		System.out.println(recursePalindrome(str));
 	}
 
 }
