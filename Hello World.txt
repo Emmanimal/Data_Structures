@@ -1,3 +1,0 @@
-This is a test document. 
-
-First time using Git Bash command line to push/pull.
